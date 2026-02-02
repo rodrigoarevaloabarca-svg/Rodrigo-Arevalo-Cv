@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description" content="Portfolio de Rodrigo Arévalo, Desarrollador Full Stack Especializado en Python y Django.">
+    <link rel="icon" type="image/png" href="./assets/favicons/1.2.svg" sizes="32x32" />
+    <title>CV Rodrigo Arevalo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="./assets/js/tailwind-config.js"></script>
+    <script src="./assets/js/main.js" defer></script>
+    <link  rel="stylesheet" href="./assets/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-200 transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+
+    <header class="sticky top-0 z-50 w-full glass-nav border-b border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-background-dark/70">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2 group cursor-pointer">
+                <div class="p-1.5 bg-primary rounded-lg text-white">
+                     <span class="material-symbols-outlined text-[20px]">terminal</span>
+                </div>
+                <span class="text-lg font-bold tracking-tight">PythonDev</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#home">Inicio</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#about">Sobre Mi</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#experience">Experiencia</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#projects">Projectos</a>
+
+            </nav>
+            <div class="flex items-center gap-4">
+                <div class="hidden sm:flex items-center gap-3 mr-2">
+                    <a href="https://github.com/rodrigoarevaloabarca-svg" target="_blank" class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+                        <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rodrigoarevaloabarca/" target="_blank" class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+                        <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                    </a>
+                </div>
+
+                <button class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:ring-2 ring-primary/20 transition-all" onclick="toggleDarkMode()">
+                    <span class="material-symbols-outlined dark:hidden text-[20px]">dark_mode</span>
+                    <span class="material-symbols-outlined hidden dark:block text-[20px] text-yellow-400">light_mode</span>
+                </button>
+
+                <a class="hidden sm:block px-4 py-2 bg-primary text-white text-sm font-bold rounded-lg hover:opacity-90 transition-opacity" href="#contact">
+                    Contactame
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="flex-1 w-full">
+
+        <section class="max-w-7xl mx-auto px-6 py-20 md:py-32" id="home">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-6 border border-primary/20">
+                            <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                            </span>
+                                                    BUSCANDO NUEVAS OPORTUNIDADES
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] mb-6">
+                            Construyendo <br/>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-500">Soluciones con Python</span>
+                        </h1>
+                        <p class="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-xl leading-relaxed">
+                            Desarrollador Full Stack en formación con una base sólida en el ecosistema de Python y Django. Cuento con conocimientos técnicos en Front-end (HTML y JavaScript)
+                            y una fuerte orientación hacia las buenas prácticas de desarrollo. Me considero una persona con gran disciplina, capacidad de autoaprendizaje y una actitud
+                            colaborativa para el trabajo en equipo. Busco mi primera oportunidad profesional para aportar mis conocimientos técnicos, crecer bajo la guía de mentores y
+                            contribuir con soluciones eficientes al desarrollo de productos digitales. .
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <button class="px-8 py-4 bg-primary text-white font-bold rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all">
+                                                            Proyectos
+                                                        </button>
+                            <button class="px-8 py-4 bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white font-bold rounded-xl hover:bg-slate-300 dark:hover:bg-slate-700 transition-all">
+                                                            Descarga mi CV
+                                                        </button>
+                    </div>
+                    </div>
+                    <div class="order-1 md:order-2 flex justify-center md:justify-end">
+                    <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-primary to-indigo-500 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-white dark:border-slate-800 bg-slate-100 dark:bg-slate-900 overflow-hidden shadow-2xl">
+                    <div class="w-full h-full bg-cover bg-center" data-alt="Professional portrait of a software engineer" style="background-image: url('./assets/img/foto.png');"></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white/50 dark:bg-slate-900/50 py-24 border-y border-slate-200 dark:border-slate-800" id="about">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="max-w-3xl">
+                    <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+                    <span class="w-8 h-1 bg-primary rounded-full"></span>
+                                                Sobre Mi
+                    </h2>
+                    <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                        Como Full Stack Developer en formación, mi objetivo va más allá de escribir código: me apasiona el concepto de Building Scalable applications.
+                        Domino las bases de Front-end (HTML/JS) y Back-end (Python/Django), aplicándolas con una mentalidad de escalabilidad y eficiencia desde el primer día.
+                        Soy una persona disciplinada, comprometida con el trabajo en equipo y en constante aprendizaje para transformar desafíos técnicos en sistemas robustos y sostenibles.
+                                        </p>
+                    <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Mi especialización técnica se basa en el ecosistema de Python y Django, donde aplico principios de código limpio y estructuras modulares. Mi objetivo es transformar
+                        requerimientos complejos en aplicaciones escalables, seguras y fáciles de mantener, optimizando siempre el lado del servidor para una experiencia de usuario fluida..
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-6 py-24" id="experience">
+            <h2 class="text-3xl font-bold mb-16 text-center">Experiencias</h2>
+            <div class="relative max-w-4xl mx-auto timeline-line">
+                <!-- Item 1 -->
+                <div class="relative mb-20 flex flex-col md:flex-row items-center md:items-start">
+                    <div class="flex-1 md:text-right md:pr-12 mb-4 md:mb-0">
+                        <span class="text-primary font-bold">fecha</span>
+                        <h3 class="text-xl font-bold mt-1">cargo</h3>
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background-light dark:border-background-dark z-10"></div>
+                    <div class="flex-1 md:pl-12">
+                        <h4 class="font-bold text-slate-500 dark:text-slate-400 mb-2">Empresa ejemplo</h4>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                                        Que se realizaba
+                        </p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="relative mb-20 flex flex-col md:flex-row items-center md:items-start">
+                    <div class="flex-1 md:text-right md:pr-12 mb-4 md:mb-0">
+                        <span class="text-primary font-bold">fecha</span>
+                        <h3 class="text-xl font-bold mt-1">cargo</h3>
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 border-4 border-background-light dark:border-background-dark z-10"></div>
+                    <div class="flex-1 md:pl-12">
+                        <h4 class="font-bold text-slate-500 dark:text-slate-400 mb-2">empresa</h4>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                                        labor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-slate-100 dark:bg-slate-900/30 py-24" id="projects">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Proyectos desarrollados</h2>
+                    <p class="text-slate-500 dark:text-slate-400"> Trabajos realizados en mi formacion.</p>
+                </div>
+                <a href="https://github.com/rodrigoarevaloabarca-svg?tab=repositories" target="_blank" rel="noopener noreferrer">
+                    <button class="text-primary font-bold flex items-center gap-1 hover:gap-2 transition-all">
+                        Ver mi Repositorio <span class="material-symbols-outlined text-[18px]">arrow_right_alt</span>
+                    </button>
+                </a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+            <!-- Project Card 1 -->
+                <div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl hover:border-primary/50 transition-all duration-300">
+                    <div class="flex gap-2 mb-4 flex-wrap">
+                        <span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase tracking-wider">HTML</span>
+                        <span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase tracking-wider">JS</span>
+                        <span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase tracking-wider">Bootstrap</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Proyecto Modulo "Alke Wallet"</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">
+                        Este proyecto, denominado Alke Wallet, consiste en una aplicación web de billetera digital diseñada para gestionar operaciones financieras básicas de forma intuitiva.
+                        La aplicación está estructurada bajo una arquitectura web estándar, utilizando HTML5 para la estructura, CSS3 para el diseño visual y JavaScript para la lógica del lado del cliente.
+                    </p>
+                    <a class="inline-flex items-center gap-2 text-sm font-bold border-t border-slate-100 dark:border-slate-800 pt-4 w-full" href="https://github.com/rodrigoarevaloabarca-svg/Porta_2_modulo" target="_blank">
+                        <span class="material-symbols-outlined text-[18px]">code</span>
+                        Ver en GitHub
+                    </a>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl hover:border-primary/50 transition-all duration-300">
+                    <div class="flex gap-2 mb-4 flex-wrap">
+                        <span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase tracking-wider">Python</span>
+                        <span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase tracking-wider">Fundamentos</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Fundamento Python</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">
+                        Este proyecto consiste en una aplicación de consola desarrollada en Python, diseñada para la gestión y validación de datos. La estructura está organizada de forma
+                        modular para facilitar el mantenimiento y la escalabilidad, separando la lógica de negocio, la interfaz de usuario y las validaciones.
+                    </p>
+                    <a class="inline-flex items-center gap-2 text-sm font-bold border-t border-slate-100 dark:border-slate-800 pt-4 w-full" href="https://github.com/rodrigoarevaloabarca-svg/Proyecto_Modulo_3" target="_blank">
+                    <span class="material-symbols-outlined text-[18px]">code</span>
+                       Ver en GitHub
+                    </a>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl hover:border-primary/50 transition-all duration-300">
+                    <div class="flex gap-2 mb-4 flex-wrap">
+                        <span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase tracking-wider">Python</span>
+                        <span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase tracking-wider">Anazado</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Programacion Orientada a objetos</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">
+                        Meta PAES ejercicio es un sistema de gestión de postulaciones desarrollado en Python. Permite la administración de carreras académicas y el registro de postulantes,
+                        asegurando que los datos ingresados cumplan con formatos específicos mediante un módulo de validaciones robusto.
+                     </p>
+                    <a class="inline-flex items-center gap-2 text-sm font-bold border-t border-slate-100 dark:border-slate-800 pt-4 w-full" href="https://github.com/rodrigoarevaloabarca-svg/PAES_ejercicio" target="_blank">
+                    <span class="material-symbols-outlined text-[18px]">code</span>
+                         Ver en GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="max-w-7xl mx-auto px-6 py-24" id="contact">
+            <div class="max-w-xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-4">Contactame</h2>
+                <p class="text-slate-500 dark:text-slate-400 mb-12">
+                    Tienes un proyecto en mente? Hablemos sobre cómo podemos construir algo increíble juntos.
+                </p>
+                <form class="space-y-4 text-left">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="space-y-1.5">
+                            <label class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider ml-1">Nombre</label>
+                            <input class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Rodrigo Arevalo" type="text"/>
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider ml-1">Email</label>
+                            <input class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Rodrigoarevalo@email.cl" type="email"/>
+                        </div>
+                    </div>
+
+                    <div class="space-y-1.5">
+                        <label class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider ml-1">Asunto</label>
+                        <input class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="¿En qué podemos ayudarte?" type="text"/>
+                    </div>
+
+                    <div class="space-y-1.5">
+                        <label class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider ml-1">Mensaje</label>
+                        <textarea class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Detalla tu consulta o Propuesta" rows="4"> </textarea>
+                    </div>
+
+                    <button class="w-full py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.01] active:scale-95 transition-all">
+                        Enviar Mensaje
+                    </button>
+                </form>
+                <div class="mt-16 flex justify-center gap-8">
+                    <a class="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:text-primary transition-colors" href="https://github.com/rodrigoarevaloabarca-svg" target="_blank">
+                    <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                    </a>
+                    <a class="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:text-primary transition-colors" href="https://www.linkedin.com/in/rodrigoarevaloabarca/" target="_blank">
+                    <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="border-t border-slate-200 dark:border-slate-800 py-12 bg-white dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <div class="p-1 bg-primary/20 rounded-md text-primary">
+                <span class="material-symbols-outlined text-[16px]">terminal</span>
+                </div>
+                <span class="text-sm font-bold">PythonDev © 2026</span>
+            </div>
+            <div class="footer-credits">
+                <p>Sitio desarrollado por <a href="https://www.linkedin.com/in/rodrigoarevaloabarca/" target="_blank">Rodrigo Arévalo</a></p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

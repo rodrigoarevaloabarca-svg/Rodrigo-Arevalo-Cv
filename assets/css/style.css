@@ -1,0 +1,36 @@
+/* Configuración de variables de Tailwind (Directivas) */
+@layer base {
+    :root {
+        --primary: #137fec;
+        --background-light: #f6f7f8;
+        --background-dark: #101922;
+    }
+}
+
+/* Estilos personalizados que tenías anteriormente */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.glass-nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.timeline-line::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: #283039;
+}
+
+.dark .timeline-line::before {
+    background: #1e293b;
+}
