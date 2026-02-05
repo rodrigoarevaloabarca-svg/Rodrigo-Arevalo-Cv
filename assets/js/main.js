@@ -33,3 +33,28 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
+function toggleMenu() {
+    const menu = document.getElementById('nav-menu');
+    const icon = document.getElementById('menu-icon');
+
+    // Alterna la clase 'hidden' (que Tailwind usa para ocultar)
+    // y 'flex' para mostrarlo como columna en móvil
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        menu.classList.add('flex');
+        icon.textContent = 'close'; // Cambia el icono a una X
+    } else {
+        menu.classList.add('hidden');
+        menu.classList.remove('flex');
+        icon.textContent = 'menu'; // Vuelve al icono de hamburguesa
+    }
+}
+
+// Opcional: Cerrar el menú al hacer clic en un enlace (para móviles)
+document.querySelectorAll('#nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+            toggleMenu();
+        }
+    });
+});
