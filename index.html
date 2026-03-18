@@ -398,7 +398,13 @@
       </div>
     </div>
 
-    <form id="contactForm" class="contact-form3 glass">
+    <form action="https://formsubmit.co/rodrigoarevaloabarca@gmail.com" method="POST" id="contactForm" class="contact-form3 glass">
+      <!-- Redirigir a la página de agradecimiento tras enviar -->
+      <input type="hidden" name="_next" value="https://rodrigoarevaloabarca-svg/Rodrigo-Arevalo-Cv/agradecimiento.html">
+      <!-- Evitar spam con honeypot -->
+      <input type="hidden" name="_honey" style="display:none">
+      <!-- Desactivar captcha de FormSubmit -->
+      <input type="hidden" name="_captcha" value="false">
       <div>
         <label class="f3-label">Nombre</label>
         <input type="text"  class="f3-input"    placeholder="Tu nombre"      required>
