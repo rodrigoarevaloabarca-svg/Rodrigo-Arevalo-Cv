@@ -200,16 +200,22 @@
 
   /* ══════════════════════════════
      10. FORMULARIO
+     FormSubmit maneja el envío y la
+     redirección a _next de forma nativa.
+     NO usamos preventDefault — dejamos
+     que el POST viaje a FormSubmit.co
   ══════════════════════════════ */
   const form = document.getElementById('contactForm');
   if (form) {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const btn  = form.querySelector('.f3-submit');
-      const orig = btn.innerHTML;
-      btn.innerHTML        = '✓ Mensaje enviado';
-      btn.style.background = 'linear-gradient(135deg, #34d399, #06b6d4)';
-      setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; form.reset(); }, 3000);
+    form.addEventListener('submit', () => {
+      // Sin e.preventDefault() → FormSubmit envía el email
+      // y redirige a la URL indicada en el campo _next
+      const btn = form.querySelector('.f3-submit');
+      if (btn) {
+        btn.innerHTML = 'Enviando...';
+        btn.style.opacity = '0.7';
+        btn.disabled = true;
+      }
     });
   }
 
