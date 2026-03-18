@@ -399,29 +399,29 @@
     </div>
 
     <form action="https://formsubmit.co/rodrigoarevaloabarca@gmail.com" method="POST" id="contactForm" class="contact-form3 glass">
-      <!-- Redirigir a la página de agradecimiento tras enviar -->
-      <input type="hidden" name="_next" value="https://rodrigoarevaloabarca-svg.github.io/Rodrigo-Arevalo-Cv/agradecimiento.html">
-      <!-- Evitar spam con honeypot -->
-      <input type="hidden" name="_honeypot" style="display:none">
-      <!-- Desactivar captcha de FormSubmit -->
-      <input type="hidden" name="_captcha" value="false">
-      <div>
-        <label class="f3-label">Nombre</label>
-        <input type="text"  class="f3-input"    placeholder="Tu nombre"      required>
-      </div>
-      <div>
-        <label class="f3-label">Email</label>
-        <input type="email" class="f3-input"    placeholder="tu@email.com"   required>
-      </div>
-      <div>
-        <label class="f3-label">Asunto</label>
-        <input type="text"  class="f3-input"    placeholder="¿De qué trata?">
-      </div>
-      <div>
-        <label class="f3-label">Mensaje</label>
-        <textarea           class="f3-textarea" placeholder="Cuéntame tu proyecto..." required></textarea>
-      </div>
-      <button type="submit" class="f3-submit">Enviar mensaje →</button>
+
+          <input type="hidden" name="_next"     value="https://rodrigoarevaloabarca-svg.github.io/Rodrigo-Arevalo-Cv/agradecimiento.html">
+          <input type="hidden" name="_honeypot" style="display:none">
+          <input type="hidden" name="_captcha"  value="false">
+
+          <div>
+            <label class="f3-label">Nombre</label>
+            <input type="text"  name="nombre"  class="f3-input"    placeholder="Tu nombre"           required>
+          </div>
+          <div>
+            <label class="f3-label">Email</label>
+            <input type="email" name="email"   class="f3-input"    placeholder="tu@email.com"        required>
+          </div>
+          <div>
+            <label class="f3-label">Asunto</label>
+            <input type="text"  name="asunto"  class="f3-input"    placeholder="¿De qué trata?">
+          </div>
+          <div>
+            <label class="f3-label">Mensaje</label>
+            <textarea           name="mensaje" class="f3-textarea"  placeholder="Cuéntame tu proyecto..." required></textarea>
+          </div>
+
+          <button type="submit" class="f3-submit">Enviar mensaje →</button>
     </form>
   </div>
 </section>
