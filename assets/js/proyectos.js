@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* Inicializar todos los slideshows de la página */
-  ['sge', 'presupuestos', 'cv' 'inventario', 'wallet', 'gic', 'paes'].forEach(initSlideshow);
+  ['sge', 'presupuestos', 'cv', 'inventario', 'wallet', 'gic', 'paes'].forEach(initSlideshow);
 
   /* ══════════════════════════════
      3. REVEAL POR SCROLL
