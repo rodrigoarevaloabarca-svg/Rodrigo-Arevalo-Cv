@@ -8,43 +8,42 @@
 (function () {
   'use strict';
 
-  /* ══════════════════════════════
-     1. FILTROS POR CATEGORÍA
-  ══════════════════════════════ */
-  const filterBar = document.getElementById('filterBar');
+/* ══════════════════════════════
+   1. FILTROS POR CATEGORÍA
+══════════════════════════════ */
+document.addEventListener('DOMContentLoaded', function () {
 
-  if (filterBar) {
-    filterBar.addEventListener('click', function (e) {
-      const btn = e.target.closest('.filter-btn');
-      if (!btn) return;
+  var filterBar = document.getElementById('filterBar');
+  if (!filterBar) return;
 
-      /* Activar botón */
-      filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  filterBar.addEventListener('click', function (e) {
+    var btn = e.target.closest('.filter-btn');
+    if (!btn) return;
 
-      const filter = btn.dataset.filter;
-
-      /* Mostrar / ocultar cards */
-      document.querySelectorAll('.proj-card').forEach(function (card) {
-        const tags = card.dataset.tags || '';
-        const visible = filter === 'all' || tags.includes(filter);
-
-        if (visible) {
-          card.style.display = '';
-          /* Pequeña animación de re-entrada */
-          card.style.opacity   = '0';
-          card.style.transform = 'translateY(16px)';
-          requestAnimationFrame(function () {
-            card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
-            card.style.opacity    = '1';
-            card.style.transform  = 'translateY(0)';
-          });
-        } else {
-          card.style.display = 'none';
-        }
-      });
+    // Activar botón
+    filterBar.querySelectorAll('.filter-btn').forEach(function (b) {
+      b.classList.remove('active');
     });
-  }
+    btn.classList.add('active');
+
+    var filter = btn.dataset.filter;
+
+    // Filtrar cards
+    document.querySelectorAll('#projectsGrid .proj-card').forEach(function (card) {
+      var tags = card.dataset.tags || '';
+      var visible = filter === 'all' || tags.split(' ').indexOf(filter) !== -1;
+
+      if (visible) {
+        card.style.display   = '';
+        card.style.opacity   = '1';
+        card.style.transform = 'translateY(0)';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+
+});
 
   /* ══════════════════════════════
      2. MOTOR DE SLIDESHOW
