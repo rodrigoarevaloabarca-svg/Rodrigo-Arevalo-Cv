@@ -8,7 +8,7 @@
 
 <!-- Favicon SVG inline generado como data URI -->
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-<link rel="alternate icon" href="assets/img/favicon.png">
+<link rel="alternate icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -33,7 +33,7 @@
     <li><a href="#home"       class="nav-link">Inicio</a></li>
     <li><a href="#about"      class="nav-link">Sobre mí</a></li>
     <li><a href="#experience" class="nav-link">Experiencia</a></li>
-    <li><a href="#projects"   class="nav-link">Proyectos</a></li>
+    <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
     <li><a href="#contact"    class="nav-link">Contacto</a></li>
   </ul>
 
@@ -65,7 +65,7 @@
     <li><a href="#home"       class="drawer-link">Inicio</a></li>
     <li><a href="#about"      class="drawer-link">Sobre mí</a></li>
     <li><a href="#experience" class="drawer-link">Experiencia</a></li>
-    <li><a href="#projects"   class="drawer-link">Proyectos</a></li>
+    <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
     <li><a href="#contact"    class="drawer-link">Contacto</a></li>
   </ul>
   <a href="assets/-CV-Rodrigo Arevalo.pdf" download class="btn-glow drawer-cv">↓ Descargar CV</a>
@@ -112,7 +112,7 @@
   </p>
 
   <div class="hero-btns anim d4">
-    <a href="#projects" class="btn-glow">Ver proyectos →</a>
+    <a href="proyectos.html" class="btn-glow">Ver proyectos →</a>
     <a href="https://github.com/rodrigoarevaloabarca-svg?tab=repositories" target="_blank" class="btn-glass-pill">⌥ GitHub</a>
     <a href="https://www.linkedin.com/in/rodrigoarevaloabarca/" target="_blank" class="btn-glass-pill">in LinkedIn</a>
   </div>
@@ -227,148 +227,6 @@
         <span class="exp-tag3">Clientes +30%</span>
         <span class="exp-tag3">Cumplimiento legal 100%</span>
         <span class="exp-tag3">Redes LAN/WAN</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="s-label">Portafolio</div>
-  <h2 class="s-title">Proyectos <span class="g1">desarrollados.</span></h2>
-
-  <!-- ── GALERÍA SLIDER ── -->
-  <div class="gallery-wrap">
-    <div class="gallery-track" id="galleryTrack">
-
-      <div class="gallery-slide">
-        <img src="assets/img/projects/sge-1.png" alt="SGE — Vista principal" loading="lazy">
-        <div class="gallery-caption">
-          <span class="gc-project">Sistema Gestión Escolar</span>
-          <span class="gc-desc">Dashboard principal multi-rol</span>
-        </div>
-      </div>
-
-      <div class="gallery-slide">
-        <img src="assets/img/projects/sge-2.png" alt="SGE — Módulo notas" loading="lazy">
-        <div class="gallery-caption">
-          <span class="gc-project">Sistema Gestión Escolar</span>
-          <span class="gc-desc">Módulo de notas y asistencia</span>
-        </div>
-      </div>
-
-      <div class="gallery-slide">
-        <img src="assets/img/projects/inventario-1.png" alt="Inventario — Vista principal" loading="lazy">
-        <div class="gallery-caption">
-          <span class="gc-project">Gestión de Inventario</span>
-          <span class="gc-desc">Panel de control de stock</span>
-        </div>
-      </div>
-
-      <div class="gallery-slide">
-        <img src="assets/img/projects/wallet-1.png" alt="Alke Wallet — Interfaz" loading="lazy">
-        <div class="gallery-caption">
-          <span class="gc-project">Alke Wallet</span>
-          <span class="gc-desc">Interfaz de billetera digital</span>
-        </div>
-      </div>
-
-      <div class="gallery-slide">
-        <img src="assets/img/projects/gic-1.png" alt="GIC — Clientes" loading="lazy">
-        <div class="gallery-caption">
-          <span class="gc-project">Gestor de Clientes</span>
-          <span class="gc-desc">Sistema de gestión de perfiles</span>
-        </div>
-      </div>
-
-      <div class="gallery-slide">
-        <img src="assets/img/projects/cv-1.png" alt="Portafolio Web" loading="lazy">
-        <div class="gallery-caption">
-          <span class="gc-project">Portafolio CV Web</span>
-          <span class="gc-desc">Este mismo sitio — diseño neon</span>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Controles -->
-    <button class="gallery-btn gallery-prev" id="galleryPrev" aria-label="Anterior">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
-    <button class="gallery-btn gallery-next" id="galleryNext" aria-label="Siguiente">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-    </button>
-
-    <!-- Dots -->
-    <div class="gallery-dots" id="galleryDots"></div>
-
-    <!-- Barra de progreso autoplay -->
-    <div class="gallery-progress"><div class="gallery-progress-bar" id="galleryProgressBar"></div></div>
-  </div>
-  <!-- ── FIN GALERÍA ── -->
-
-  <div class="proj-grid3">
-    <div class="proj-card3 big glass">
-      <div class="proj-num3">01 — DESTACADO</div>
-      <div class="proj-title3">Sistema de Gestión Escolar (SGE)</div>
-      <p class="proj-desc3">Sistema completo en Django con módulos de notas, asistencia, informes PDF, anotaciones y notificaciones para colegios chilenos. Arquitectura multi-rol, totalmente responsive con modo oscuro integrado.</p>
-      <div class="proj-footer3">
-        <div class="proj-stack3">
-          <span class="proj-tech3">Python</span>
-          <span class="proj-tech3">Django</span>
-          <span class="proj-tech3">Tailwind</span>
-          <span class="proj-tech3">MySQL</span>
-          <span class="proj-tech3">PDF</span>
-        </div>
-        <a href="https://github.com/rodrigoarevaloabarca-svg/ProyectoSGE" target="_blank" class="proj-link3">GitHub →</a>
-      </div>
-    </div>
-
-    <div class="proj-card3 glass">
-      <div class="proj-num3">02</div>
-      <div class="proj-title3">Gestión de Inventario + MySQL</div>
-      <p class="proj-desc3">Sistema Python con MySQL en Docker. CRUD completo y reportes de stock en arquitectura modular.</p>
-      <div class="proj-footer3">
-        <div class="proj-stack3">
-          <span class="proj-tech3">Python</span><span class="proj-tech3">MySQL</span><span class="proj-tech3">Docker</span>
-        </div>
-        <a href="https://github.com/rodrigoarevaloabarca-svg/Sistema_de_Gestion_de_Inventario_MySQL" target="_blank" class="proj-link3">GitHub →</a>
-      </div>
-    </div>
-
-    <div class="proj-card3 glass">
-      <div class="proj-num3">03</div>
-      <div class="proj-title3">Gestor Inteligente de Clientes</div>
-      <p class="proj-desc3">Sistema modular en Python con POO avanzada para gestionar perfiles regulares, premium y corporativos.</p>
-      <div class="proj-footer3">
-        <div class="proj-stack3">
-          <span class="proj-tech3">Python</span><span class="proj-tech3">POO</span><span class="proj-tech3">UML</span>
-        </div>
-        <a href="https://github.com/rodrigoarevaloabarca-svg/Proyecto_Modulo_4" target="_blank" class="proj-link3">GitHub →</a>
-      </div>
-    </div>
-
-    <div class="proj-card3 glass">
-      <div class="proj-num3">04</div>
-      <div class="proj-title3">Alke Wallet</div>
-      <p class="proj-desc3">App web de billetera digital para operaciones financieras básicas con HTML5, CSS3 y JavaScript.</p>
-      <div class="proj-footer3">
-        <div class="proj-stack3">
-          <span class="proj-tech3">HTML</span><span class="proj-tech3">JS</span><span class="proj-tech3">Bootstrap</span>
-        </div>
-        <a href="https://github.com/rodrigoarevaloabarca-svg/Porta_2_modulo" target="_blank" class="proj-link3">GitHub →</a>
-      </div>
-    </div>
-
-    <div class="proj-card3 glass">
-      <div class="proj-num3">05</div>
-      <div class="proj-title3">PAES — Sistema de Postulaciones</div>
-      <p class="proj-desc3">Gestión académica en Python con módulo de validaciones robusto mediante POO avanzada.</p>
-      <div class="proj-footer3">
-        <div class="proj-stack3">
-          <span class="proj-tech3">Python</span><span class="proj-tech3">POO</span>
-        </div>
-        <a href="https://github.com/rodrigoarevaloabarca-svg/PAES_ejercicio" target="_blank" class="proj-link3">GitHub →</a>
       </div>
     </div>
   </div>

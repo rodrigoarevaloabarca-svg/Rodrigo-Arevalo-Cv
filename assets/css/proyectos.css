@@ -1,0 +1,527 @@
+/* ===================================================
+   PROYECTOS.CSS
+   Estilos exclusivos de proyectos.html
+   Requiere: style.css cargado antes
+=================================================== */
+
+/* ══════════════════════════════════════════
+   HERO DE PÁGINA
+══════════════════════════════════════════ */
+.page-hero {
+  position: relative;
+  z-index: 2;
+  padding: 120px clamp(20px, 6vw, 80px) 48px;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--card);
+  border: 1px solid var(--glass-border);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--neon4);
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(52,211,153,0.5); }
+  50%       { opacity: 0.6; box-shadow: 0 0 0 5px rgba(52,211,153,0); }
+}
+
+/* ══════════════════════════════════════════
+   BARRA DE FILTROS
+══════════════════════════════════════════ */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+  padding: 0 clamp(20px, 6vw, 80px);
+}
+
+.filter-btn {
+  padding: 7px 20px;
+  border-radius: 100px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--card);
+  border: 1px solid var(--glass-border);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn:hover {
+  border-color: var(--neon1);
+  color: var(--text);
+}
+.filter-btn.active {
+  background: rgba(168,85,247,0.12);
+  border-color: var(--neon1);
+  color: var(--text);
+  box-shadow: 0 0 16px rgba(168,85,247,0.15);
+}
+
+/* ══════════════════════════════════════════
+   GRID DE PROYECTOS
+══════════════════════════════════════════ */
+.projects-section {
+  position: relative;
+  z-index: 2;
+  padding: 0 clamp(20px, 6vw, 80px) 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+/* ── Card base ── */
+.proj-card {
+  background: var(--card);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: default;
+}
+.proj-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(168,85,247,0.4);
+  box-shadow: 0 24px 60px rgba(168,85,247,0.12);
+}
+
+/* ── Card destacada (ocupa todo el ancho) ── */
+.proj-card.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ── Badge EN VIVO ── */
+.live-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(52,211,153,0.10);
+  border: 1px solid rgba(52,211,153,0.28);
+  border-radius: 100px;
+  padding: 4px 12px;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: 'Fira Code', monospace;
+  color: var(--neon4);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* ══════════════════════════════════════════
+   SLIDESHOW DEMO — elemento novedoso
+══════════════════════════════════════════ */
+.demo-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #07050f;
+  min-height: 200px;
+}
+
+.demo-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.demo-slide.active { opacity: 1; }
+
+.demo-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+/* Gradiente inferior sobre la imagen */
+.demo-slide img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 55%, rgba(7,5,15,0.85) 100%);
+}
+
+/* Placeholder sin imagen */
+.demo-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  background: linear-gradient(135deg, #0d0b1a, #1a1530);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--muted);
+}
+.demo-placeholder svg   { opacity: 0.25; }
+.demo-placeholder span  { font-size: 12px; font-family: 'Fira Code', monospace; }
+.demo-placeholder small { font-size: 10px; opacity: 0.5; font-family: 'Fira Code', monospace; }
+
+/* ── Barra de progreso autoplay ── */
+.demo-progress {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: rgba(255,255,255,0.08);
+  z-index: 6;
+}
+.demo-progress-bar {
+  height: 100%;
+  background: var(--grad1);
+  width: 0%;
+  box-shadow: 0 0 6px rgba(168,85,247,0.5);
+  transition: width 0.1s linear;
+}
+
+/* ── Controles del slideshow ── */
+.demo-controls {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: linear-gradient(to top, rgba(7,5,15,0.9) 0%, transparent 100%);
+}
+
+.demo-dots {
+  display: flex;
+  gap: 5px;
+}
+.demo-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  padding: 0;
+}
+.demo-dot.active {
+  background: var(--neon1);
+  width: 16px;
+  border-radius: 3px;
+  box-shadow: 0 0 6px rgba(168,85,247,0.6);
+}
+
+.demo-nav {
+  display: flex;
+  gap: 4px;
+}
+.demo-nav button {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--text);
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  padding: 0;
+}
+.demo-nav button:hover {
+  background: rgba(168,85,247,0.35);
+  border-color: var(--neon1);
+}
+
+/* ══════════════════════════════════════════
+   BODY DE CARD
+══════════════════════════════════════════ */
+.proj-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.proj-featured-body {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.proj-num {
+  font-family: 'Fira Code', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--neon1);
+  text-transform: uppercase;
+}
+
+.proj-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.proj-desc {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* Stack de tecnologías */
+.proj-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.proj-tech {
+  font-family: 'Fira Code', monospace;
+  font-size: 10px;
+  font-weight: 400;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: rgba(168,85,247,0.10);
+  border: 1px solid rgba(168,85,247,0.22);
+  color: var(--neon1);
+}
+
+/* Links de card */
+.proj-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.btn-demo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--grad1);
+  border: none;
+  border-radius: 100px;
+  padding: 9px 20px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #07050f;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+.btn-demo:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(168,85,247,0.4);
+}
+
+.btn-demo.btn-secondary {
+  background: var(--grad3);
+}
+
+.btn-gh {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--card);
+  border: 1px solid var(--glass-border);
+  border-radius: 100px;
+  padding: 8px 18px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.btn-gh:hover {
+  border-color: var(--neon1);
+  color: var(--text);
+  background: rgba(168,85,247,0.08);
+}
+
+/* ══════════════════════════════════════════
+   STATS DEL PROYECTO DESTACADO
+══════════════════════════════════════════ */
+.proj-stats {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.pstat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.pstat-val {
+  font-size: 1.3rem;
+  font-weight: 800;
+  background: var(--grad1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.pstat-lbl {
+  font-size: 10px;
+  font-family: 'Fira Code', monospace;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ══════════════════════════════════════════
+   SECCIÓN ESTADO EN PRODUCCIÓN
+══════════════════════════════════════════ */
+.status-section {
+  position: relative;
+  z-index: 2;
+  padding: 0 clamp(20px, 6vw, 80px) 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.status-card {
+  background: var(--card);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: border-color 0.2s;
+}
+.status-card:hover { border-color: var(--glass-border2); }
+
+.status-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.status-info { flex: 1; min-width: 0; }
+.status-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.status-url {
+  font-family: 'Fira Code', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Fira Code', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.status-dot.online {
+  background: var(--neon4);
+  animation: pulseDot 2s infinite;
+}
+.status-dot.offline  { background: #f87171; }
+.status-dot.unknown  { background: var(--muted); }
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+@media (max-width: 860px) {
+  .proj-card.featured {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .proj-card.featured {
+    grid-column: 1;
+  }
+  .proj-featured-body {
+    padding: 20px;
+  }
+  .filter-bar {
+    gap: 6px;
+  }
+  .filter-btn {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+  .status-grid {
+    grid-template-columns: 1fr;
+  }
+}
